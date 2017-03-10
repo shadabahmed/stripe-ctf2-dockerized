@@ -1,0 +1,18 @@
+version: '2'
+services:
+  level00:
+    build: ./0
+    env_file: ./env/level0
+  level01:
+    build: ./1
+    env_file: ./env/level1
+  level02:
+    build: ./2
+    env_file: ./env/level2
+  level03:
+    build: ./3
+    env_file: ./env/level3    
+  portal:
+    build: ./
+    ports:
+      - 80:80
