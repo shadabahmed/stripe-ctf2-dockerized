@@ -30,18 +30,5 @@ server {
       proxy_redirect ~(^.*)/(.*)$ /level00/$2;
     }
 
-    location /level01/ {
-      proxy_pass http://level01:8000/;
-      proxy_redirect ~(^.*)/(.*)$ /level01/$2;
-    }
-
-    location /level02/ {
-      proxy_pass http://level02:8000/;
-      proxy_redirect ~(^.*)/(.*)$ /level02/$2;
-    }
-
-    location /level03/ {
-      proxy_pass http://level03:5000/;
-      proxy_redirect ~(^.*)/(.*)$ /level03/$2;
-    }
+    $LEVEL_CONFIGS
 }
