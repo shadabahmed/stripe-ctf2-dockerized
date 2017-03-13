@@ -17,3 +17,4 @@ if (
 } else {
   include_once 'index.php';
 }
+?>
